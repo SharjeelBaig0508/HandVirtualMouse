@@ -99,7 +99,7 @@ def main(mouseMovementSmoothening:int = 7,
                 if screenDisplay:
                     cv2.circle(img, (xThumb, yThumb), 15, (0, 255, 0), cv2.FILLED)
             
-                if previousHandPosition == FIST:
+                if previousHandPosition != THUMB:
                     if leftClickHold == False:
                         # i. First Left Click Hold
                         leftClickHold = True
@@ -200,4 +200,4 @@ def main(mouseMovementSmoothening:int = 7,
                 break
         
 if __name__ == '__main__':
-    main(screenDisplay=True)
+    main(screenDisplay=False)
