@@ -191,7 +191,7 @@ def main(mouseMovementSmoothening:int = 7,
             if cTime - pTime != 0:
                 fps = 1 / (cTime - pTime)
             else:
-                fps = 1
+                fps = np.Infinity
 
             pTime = cTime
             cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
