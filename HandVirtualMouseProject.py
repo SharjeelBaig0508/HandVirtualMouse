@@ -63,7 +63,7 @@ def main(mouseMovementSmoothening:int = 7,
         success, img = cap.read()
         
         # 1: Blur Background for better detection
-        img = processor.backgroungBlur(img, blur_type=0.3)
+        img = processor.backgroundBlur(img, blur_type=0.3)
     
         # 2. Find Hand Landmarks
         img = detector.findHands(img, draw=screenDisplay)

@@ -7,7 +7,7 @@ class imageProcessor():
     def __init__(self):
         pass
         
-    def backgroungBlur(self, img, blur_type=1):
+    def backgroundBlur(self, img, blur_type=1):
         # Step 1: Convert to the HSV color space
         hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
         
@@ -35,7 +35,7 @@ def main():
     
     while True:
         success, img = cap.read()
-        img = processor.backgroungBlur(img)
+        img = processor.backgroundBlur(img)
             
         cTime = time.time()
         fps = 1 / (cTime - pTime)
